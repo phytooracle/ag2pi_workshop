@@ -41,5 +41,5 @@ RUN export C_INCLUDE_PATH=/usr/include/gdal
 RUN apt-get install -y locales && locale-gen en_US.UTF-8
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
 
-CMD [ "jupyter-lab --ip '*'" ]
+ENTRYPOINT [ "jupyter-lab --no-browser --ip '*'" ]
 
