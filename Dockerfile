@@ -25,19 +25,26 @@ RUN apt-get install -y wget \
                        tk-dev \
                        libgdbm-dev \
                        libc6-dev \
-                       liblzma-dev
+                       liblzma-dev \
+                       gdal-bin \
+                       libgdal-dev \
+                       libspatialindex-dev
 
 EXPOSE 8888
 
 
-RUN wget https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
-RUN tar -xzf Python-3.8.5.tgz
-RUN cd Python-3.8.5/ && ./configure --with-ensurepip=install && make && make install
+# RUN wget https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
+# RUN tar -xzf Python-3.8.5.tgz
+# RUN cd Python-3.8.5/ && ./configure --with-ensurepip=install && make && make install
 
 RUN add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 RUN apt-get update
 RUN apt-get install -y libgdal-dev
 RUN pip3 install -r requirements.txt
+RUN wget http://download.osgeo.org/libspatialindex/spatialindex-src-1.7.1.tar.gz
+RUN tar -xvf spatialindex-src-1.7.1.tar.gz
+RUN cd spatialindex-src-1.7.1/ && ./configure && make && make install
+RUN ldconfig
 RUN add-apt-repository ppa:ubuntugis/ppa
 RUN export CPLUS_INCLUDE_PATH=/usr/include/gdal
 RUN export C_INCLUDE_PATH=/usr/include/gdal
