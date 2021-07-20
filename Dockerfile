@@ -32,11 +32,9 @@ RUN apt-get install -y wget \
 
 EXPOSE 8888
 
-
-# RUN wget https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
-# RUN tar -xzf Python-3.8.5.tgz
-# RUN cd Python-3.8.5/ && ./configure --with-ensurepip=install && make && make install
-
+RUN wget https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
+RUN tar -xzf Python-3.8.5.tgz
+RUN cd Python-3.8.5/ && ./configure --with-ensurepip=install && make && make install
 RUN add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 RUN apt-get update
 RUN apt-get install -y libgdal-dev
