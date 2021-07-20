@@ -7,7 +7,9 @@ USER root
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update -y
-RUN apt-get install -y wget \
+RUN apt-get install -y python3.6\
+                       python3-pip \
+                       wget \
                        build-essential \
                        software-properties-common \
                        apt-utils \
@@ -32,9 +34,10 @@ RUN apt-get install -y wget \
 
 EXPOSE 8888
 
-RUN wget https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
-RUN tar -xzf Python-3.8.5.tgz
-RUN cd Python-3.8.5/ && ./configure --with-ensurepip=install && make && make install
+# RUN wget https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
+# RUN tar -xzf Python-3.8.5.tgz
+# RUN cd Python-3.8.5/ && ./configure --with-ensurepip=install && make && make install
+
 RUN add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 RUN apt-get update
 RUN apt-get install -y libgdal-dev
