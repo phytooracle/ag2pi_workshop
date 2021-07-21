@@ -12,7 +12,7 @@ tifffile==2020.2.16
 matplotlib==3.2.1
 opencv-python==3.4.9.31
 detecto==1.1.6
-imagecodecs==2020.2.18
+imagecodecs
 scipy==1.4.1
 scikit-image==0.17.2
 hypers==0.1.1
