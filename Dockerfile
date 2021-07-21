@@ -8,7 +8,7 @@ USER root
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update -y
 RUN apt-get install -y \
-                        python3.6\
+                        python3.6 \
                         python3-pip \
                         wget \
                         build-essential \
@@ -41,14 +41,13 @@ RUN apt-get install -y \
                         libpq-dev \
                         libssl1.0 \
                         lsb \
-                        nano \
                         nodejs \
                         python-requests 
 
 EXPOSE 8888
 
-RUN wget https://files.renci.org/pub/irods/releases/4.1.12/ubuntu14/irods-icommands-4.1.12-ubuntu14-x86_64.deb && \
-dpkg -i irods-icommands-4.1.12-ubuntu14-x86_64.deb && \ rm irods-icommands-4.1.12-ubuntu14-x86_64.deb
+RUN wget https://files.renci.org/pub/irods/releases/4.1.10/ubuntu14/irods-icommands-4.1.10-ubuntu14-x86_64.deb \
+    && apt-get install -y ./irods-icommands-4.1.10-ubuntu14-x86_64.deb
 
 RUN add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 RUN apt-get update
