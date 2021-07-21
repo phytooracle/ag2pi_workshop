@@ -43,15 +43,12 @@ RUN apt-get install -y \
                         lsb \
                         nano \
                         nodejs \
-                        python-requests \
-                        software-properties-common \
-                        vim
+                        python-requests 
 
 EXPOSE 8888
-# Install iCommands
+
 RUN wget https://files.renci.org/pub/irods/releases/4.1.12/ubuntu14/irods-icommands-4.1.12-ubuntu14-x86_64.deb && \
-dpkg -i irods-icommands-4.1.12-ubuntu14-x86_64.deb && \
-rm irods-icommands-4.1.12-ubuntu14-x86_64.deb
+dpkg -i irods-icommands-4.1.12-ubuntu14-x86_64.deb && \ rm irods-icommands-4.1.12-ubuntu14-x86_64.deb
 
 RUN add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 RUN apt-get update
