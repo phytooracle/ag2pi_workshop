@@ -24,6 +24,7 @@ RUN apt-get install -y \
                         libreadline-gplv2-dev \
                         libncursesw5-dev \
                         # libssl-dev \
+                        default-libmysqlclient-dev \
                         libsqlite3-dev \
                         tk-dev \
                         libgdbm-dev \
