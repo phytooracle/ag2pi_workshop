@@ -23,8 +23,7 @@ RUN apt-get install -y \
                         zlib1g-dev \
                         libreadline-gplv2-dev \
                         libncursesw5-dev \
-                        # libssl-dev \
-                        default-libmysqlclient-dev \
+                        libssl-dev \
                         libsqlite3-dev \
                         tk-dev \
                         libgdbm-dev \
@@ -40,7 +39,6 @@ RUN apt-get install -y \
                         less \
                         libfuse2 \
                         libpq-dev \
-                        libssl1.0 \
                         lsb \
                         nodejs \
                         python-requests 
