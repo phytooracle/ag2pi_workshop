@@ -13,4 +13,5 @@ opencv-python==3.4.9.31
 detecto==1.1.6
 scipy==1.4.1
 scikit-image==0.17.2
+pyqt5==5.14.0
 hypers==0.1.1
