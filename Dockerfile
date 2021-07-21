@@ -7,32 +7,51 @@ USER root
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update -y
-RUN apt-get install -y python3.6\
-                       python3-pip \
-                       wget \
-                       build-essential \
-                       software-properties-common \
-                       apt-utils \
-                       libgl1-mesa-glx \
-                       ffmpeg \
-                       libsm6 \
-                       libxext6 \
-                       libffi-dev \
-                       libbz2-dev \
-                       zlib1g-dev \
-                       libreadline-gplv2-dev \
-                       libncursesw5-dev \
-                       libssl-dev \
-                       libsqlite3-dev \
-                       tk-dev \
-                       libgdbm-dev \
-                       libc6-dev \
-                       liblzma-dev \
-                       gdal-bin \
-                       libgdal-dev \
-                       libspatialindex-dev
+RUN apt-get install -y \
+                        python3.6\
+                        python3-pip \
+                        wget \
+                        build-essential \
+                        software-properties-common \
+                        apt-utils \
+                        libgl1-mesa-glx \
+                        ffmpeg \
+                        libsm6 \
+                        libxext6 \
+                        libffi-dev \
+                        libbz2-dev \
+                        zlib1g-dev \
+                        libreadline-gplv2-dev \
+                        libncursesw5-dev \
+                        libssl-dev \
+                        libsqlite3-dev \
+                        tk-dev \
+                        libgdbm-dev \
+                        libc6-dev \
+                        liblzma-dev \
+                        gdal-bin \
+                        libgdal-dev \
+                        libspatialindex-dev \
+                        apt-transport-https \
+                        gcc \
+                        gnupg \
+                        htop \
+                        less \
+                        libfuse2 \
+                        libpq-dev \
+                        libssl1.0 \
+                        lsb \
+                        nano \
+                        nodejs \
+                        python-requests \
+                        software-properties-common \
+                        vim
 
 EXPOSE 8888
+# Install iCommands
+RUN wget https://files.renci.org/pub/irods/releases/4.1.12/ubuntu14/irods-icommands-4.1.12-ubuntu14-x86_64.deb && \
+dpkg -i irods-icommands-4.1.12-ubuntu14-x86_64.deb && \
+rm irods-icommands-4.1.12-ubuntu14-x86_64.deb
 
 RUN add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 RUN apt-get update
