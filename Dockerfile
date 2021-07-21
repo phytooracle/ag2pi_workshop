@@ -23,7 +23,7 @@ RUN apt-get install -y \
                         zlib1g-dev \
                         libreadline-gplv2-dev \
                         libncursesw5-dev \
-                        libssl-dev \
+                        # libssl-dev \
                         libsqlite3-dev \
                         tk-dev \
                         libgdbm-dev \
