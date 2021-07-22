@@ -14,10 +14,6 @@ PhytoOracle uses the [CCTools](https://cctools.readthedocs.io/en/latest/) master
 
 - Register for the workshop [here](https://user.cyverse.org/workshops/67).
 
-- Search for the "phenome_force_phytooracle" image:
-<p align="center">
-    <img src="pics/cyverse_image.png" />
-<p>
 
 - Launch the Jupyter Notebook container inside the VM:
 ```
