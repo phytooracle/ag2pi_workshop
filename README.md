@@ -37,6 +37,10 @@ singularity run ag2pi_workshop.simg
     <img src="pics/launch_jupyter.png" />
 <p>
 
+- If you are prompted for a password, type the following:
+```
+password
+```
     
 See our [detailed documentation](https://phytooracle.readthedocs.io) for instruction manuals and examples. 
 
