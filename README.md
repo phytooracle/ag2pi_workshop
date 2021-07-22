@@ -19,51 +19,15 @@ PhytoOracle uses the [CCTools](https://cctools.readthedocs.io/en/latest/) master
     <img src="pics/cyverse_image.png" />
 <p>
 
-- Launch the virtual machine (VM):
-<p align="center">
-    <img src="pics/cyverse_request_atmo.png" />
-<p>
-
-- Specify VM resources:
-<p align="center">
-    <img src="pics/new_cyverse_resources.png" />
-<p>
-
-- Once the VM status is "Active", click "phenome_force_phytooracle":
-<p align="center">
-    <img src="pics/cyverse_vm_ready.png" />
-<p>
-
-- Launch the VM by clicking on "Open Web Shell":
-<p align="center">
-    <img src="pics/cyverse_vm.png" />
-<p>
-
-- A terminal window open:
-<p align="center">
-    <img src="pics/cyverse_terminal.png" />
-<p>
-
-- Alternatively, you can access the VM on your own terminal by running the following command: 
+- Launch the Jupyter Notebook container inside the VM:
 ```
-ssh <CyVerse username here>@<IP address> 
+singularity build ag2pi_workshop.simg docker://phytooracle/ag2pi_workshop:latest
+singularity run ag2pi_workshop.simg
 ```
+- Copy and paste the last link into your browser to luanch the Jupyter Notebook
 
-## Pipeline preparation
-- Move workshop contents and change directory 
-```
-cd /opt/ && mv PhytoOracle/ prepare_pipeline.sh /scratch/ && cd /scratch/
-```
+
     
-- Download the necessary data 
-```
-./prepare_pipeline.sh
-```
-
-We are now ready to process our phenomic data! Lets start with [FLIR thermal data](https://github.com/LyonsLab/PhytoOracle/tree/phenome_force/FlirIr).
-
-## Documentation
-
 See our [detailed documentation](https://phytooracle.readthedocs.io) for instruction manuals and examples. 
 
 ## Supported Sensors and Pipelines
