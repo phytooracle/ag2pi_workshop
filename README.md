@@ -20,7 +20,7 @@ PhytoOracle uses the [CCTools](https://cctools.readthedocs.io/en/latest/) master
 
 - Clone our GitHub repository:
 ```
-cd /scratch && git clone https://github.com/phytooracle/ag2pi_workshop.git
+cd /scratch && git clone https://github.com/phytooracle/ag2pi_workshop.git && cd ag2pi_workshop/
 ```
 
 - Download the phenomic data and models:
