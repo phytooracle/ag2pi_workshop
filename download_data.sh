@@ -4,4 +4,4 @@ wget https://data.cyverse.org/dav-anon/iplant/projects/phytooracle/workshops/ag2
 wget https://data.cyverse.org/dav-anon/iplant/projects/phytooracle/workshops/ag2pi/flir/model_weights_sorghum_flir.pth
 wget https://data.cyverse.org/dav-anon/iplant/projects/phytooracle/workshops/ag2pi/hsi/model_weights_panel_2021-06-18_transform.pth
 wget https://data.cyverse.org/dav-anon/iplant/projects/phytooracle/workshops/ag2pi/hsi/sample.h5
-
+singularity build ag2pi_workshop.simg docker://phytooracle/ag2pi_workshop:latest
