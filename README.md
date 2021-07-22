@@ -11,7 +11,8 @@ PhytoOracle uses the [CCTools](https://cctools.readthedocs.io/en/latest/) master
 
 ## Workshop preparation
 
-- Register for the workshop [here](https://user.cyverse.org/workshops/67).
+- Access the workshop [here](https://user.cyverse.org/workshops/72). Log in with your CyVerse username and password. 
+
 
 - Access your CyVerse virtual machine (VM):
 <p align="center">
