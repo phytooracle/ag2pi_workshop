@@ -13,6 +13,11 @@ PhytoOracle uses the [CCTools](https://cctools.readthedocs.io/en/latest/) master
 
 - Register for the workshop [here](https://user.cyverse.org/workshops/67).
 
+- Access your CyVerse virtual machine (VM):
+<p align="center">
+    <img src="pics/cyverse_vm.png" />
+<p>
+
 - Clone our GitHub repository:
 ```
 cd /scratch && git clone https://github.com/phytooracle/ag2pi_workshop.git
