@@ -32,7 +32,7 @@ bash download_data.sh
 singularity run ag2pi_workshop.simg
 ```
 
-- Copy and paste the link into your browser to launch the Jupyter Notebook.
+- Copy and paste the link into your browser to launch the Jupyter Notebook:
 <p align="center">
     <img src="pics/launch_jupyter.png" />
 <p>
