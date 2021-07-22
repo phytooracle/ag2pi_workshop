@@ -10,17 +10,24 @@
 PhytoOracle uses the [CCTools](https://cctools.readthedocs.io/en/latest/) master-worker framework for distributed computing (HPC, Cloud, etc.) to process RGB (StereoTopRGB), thermal (FlirIr), chlororphyll fluorescence (PSII), and 3D point cloud (Scanner3DTop) datasets. This framework allows thousands of jobs to run in parallel on nearly any Linux environment, significantly expediting processing of phenomic data. 
 
 ## Workshop preparation
-- Create a CyVerse account [here](https://user.cyverse.org/) by clicking on "Sign Up".
 
 - Register for the workshop [here](https://user.cyverse.org/workshops/67).
 
-
-- Launch the Jupyter Notebook container inside the VM:
+- Clone our GitHub repository:
 ```
-singularity build ag2pi_workshop.simg docker://phytooracle/ag2pi_workshop:latest
+cd /scratch && git clone https://github.com/phytooracle/ag2pi_workshop.git
+```
+
+- Download the phenomic data and models:
+```
+bash download_data.sh
+```
+- Launch the Jupyter notebook:
+```
 singularity run ag2pi_workshop.simg
 ```
-- Copy and paste the last link into your browser to luanch the Jupyter Notebook
+
+- Copy and paste the link into your browser to launch the Jupyter Notebook.
 
 
     
