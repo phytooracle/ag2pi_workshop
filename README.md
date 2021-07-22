@@ -33,7 +33,9 @@ singularity run ag2pi_workshop.simg
 ```
 
 - Copy and paste the link into your browser to launch the Jupyter Notebook.
-
+<p align="center">
+    <img src="pics/launch_jupyter.png" />
+<p>
 
     
 See our [detailed documentation](https://phytooracle.readthedocs.io) for instruction manuals and examples. 
